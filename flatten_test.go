@@ -24,12 +24,7 @@ func TestFlatten(t *testing.T) {
 		},
 	}
 
-	expected := `3 errors occurred:
-	* one
-	* two
-	* three
-
-`
+	expected := "3 errors occurred: one; two; three"
 	actual := fmt.Sprintf("%s", Flatten(original))
 
 	if expected != actual {
